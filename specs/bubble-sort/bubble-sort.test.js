@@ -11,19 +11,18 @@
 */
 
 function bubbleSort(nums) {
-  // code goes here
   let swapped = false;
-  do{
+  do {
     swapped = false;
-    for(let i = 0; i < nums.length; i++){
-      if(nums[i] > nums[i+1] ){
+    for (let i = 0; i < nums.length; i++) {
+      if (nums[i] > nums[i + 1]) {
         const temp = nums[i];
-        nums[i] = nums[i+1];
-        nums[i+1] = temp;
+        nums[i] = nums[i + 1];
+        nums[i + 1] = temp;
         swapped = true;
       }
     }
-  }while(swapped)
+  } while (swapped);
 
   return nums;
 }
@@ -33,6 +32,5 @@ function bubbleSort(nums) {
 test("bubble sort", function () {
   const nums = [10, 5, 3, 8, 2, 6, 4, 7, 9, 1];
   const sortedNums = bubbleSort(nums);
-  console.log('sortedNums', sortedNums);
   expect(sortedNums).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
 });

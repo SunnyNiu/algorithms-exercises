@@ -15,7 +15,7 @@ function bubbleSort(nums) {
   do {
     swapped = false;
     for (let i = 0; i < nums.length; i++) {
-      snapshot(nums);
+      // snapshot(nums);
       if (nums[i] > nums[i + 1]) {
         const temp = nums[i];
         nums[i] = nums[i + 1];
@@ -24,7 +24,7 @@ function bubbleSort(nums) {
       }
     }
   } while (swapped);
-  snapshot(nums);
+  // snapshot(nums);
 }
 
 // unit tests
