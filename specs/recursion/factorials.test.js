@@ -11,15 +11,10 @@
 */
 
 function factorial(n) {
-  let result = 1;
-  if (n === 1) return 1;
-  if (n === 2) return 2;
+  if (n < 2) return 1;
 
-  for (let i = 0; i < n; i++) {
-    result = n * factorial(n - 1);
-  }
+  return n * factorial(n - 1);
 
-  return result;
 }
 
 // unit tests
